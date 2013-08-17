@@ -1,0 +1,28 @@
+{
+    "name": "joacub/zf-joacub-users-online",
+    "description": "Detecta los usuarios online del sitio y algunos datos mas",
+    "type": "library",
+    "keywords": [
+        "zf2"
+    ],
+    "homepage": "https://github.com/joacub/zf-joacub-users-online",
+    "authors": [
+        {
+            "name": "Johan",
+            "email": "joacub@gmail.com",
+            "homepage": "https://github.com/joacub/zf-joacub-users-online"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zf-commons/zf-joacub-user": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZfJoacubUsersOnline": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}

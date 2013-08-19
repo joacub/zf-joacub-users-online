@@ -28,7 +28,8 @@ class DetectorController extends AbstractActionController
 				$em->flush($userRegister);
 			}
 				
-			$userRegister->setLastConnect(new \DateTime());
+			$dateTime = new \DateTime();
+			$userRegister->setLastConnect($dateTime);
 			$em->persist($userRegister);
 			$em->flush($userRegister);
 			

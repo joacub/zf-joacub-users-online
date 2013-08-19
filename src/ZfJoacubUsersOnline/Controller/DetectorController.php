@@ -23,13 +23,9 @@ class DetectorController extends AbstractActionController
 			if(!$userRegister) {
 				$userRegister = new Register();
 				$userRegister->setUser($user);
-				
-				$em->persist($userRegister);
-				$em->flush($userRegister);
 			}
 				
-			$dateTime = new \DateTime();
-			$userRegister->setLastConnect($dateTime);
+			$userRegister->setLastConnect(new \DateTime('now'));
 			$em->persist($userRegister);
 			$em->flush($userRegister);
 			

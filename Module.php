@@ -45,10 +45,15 @@ class Module implements BootstrapListenerInterface
 
 	public function onRender (MvcEvent $e)
 	{
-		$renderer = $e->getApplication()
-			->getServiceManager()
+		$sm = $e->getApplication()->getServiceManager();
+		
+		$auth = $sm->get('zfcuser_auth_service');
+		if ($auth->hasIdentity()) {
+			$renderer = $sm
 			->get('viewrenderer');
-		$renderer->headScript()->appendFile($renderer->basePath('zf-joacub-users-online/js/detector.js'));
+			$renderer->headScript()->appendFile($renderer->basePath('zf-joacub-users-online/js/detector.js'));
+		}
+		
 	}
 	
 	public function getViewHelperConfig ()

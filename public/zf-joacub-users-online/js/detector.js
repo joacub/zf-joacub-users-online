@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 		xhrUsersOnline = $.ajax({
 			url : site_url + "/users-online-detector?"+date.getTime(),
 		});
-	}, 2000);
+	}, 10000);
 	
 	$(window).bind('beforeunload',function(){
 		clearInterval(intervalUserOnline);

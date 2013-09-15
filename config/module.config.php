@@ -48,6 +48,6 @@ return array(
 		)
 	),
 	__NAMESPACE__ => array(
-		'lapsed_time' => 30
+		'lapsed_time' => 30000
 	)
 );

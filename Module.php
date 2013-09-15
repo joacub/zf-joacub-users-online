@@ -65,7 +65,16 @@ class Module implements BootstrapListenerInterface
 					return new UsersOnline($sm);
 				}
 			)
-			
+				
 		);
 	}
+	
+	public function getServiceConfig ()
+    {
+    	return array(
+    		'factories' => array(
+    			'users_online' => 'ZfJoacubUsersOnline\Service\UsersOnline',
+    		)
+    	);
+    }
 }

@@ -74,8 +74,6 @@ class UsersOnline implements FactoryInterface
     		}
     	}
     	$registerEntity = $this->getOrRegister($user);
-    	echo $registerEntity->getLastConnect()->format('y-m-d');
-    	Debugger::dump($registerEntity->getUser()->getId());
     	return $this->sl->get('viewrenderer')->dateDiff($registerEntity->getLastConnect());
     }
     

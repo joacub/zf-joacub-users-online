@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 	$(window).bind('beforeunload',function(){
 		clearInterval(intervalUserOnline);
 		abortDetector = true;
-		if(typeof(xhrUsersOnline) != 'undefined')
+		if(xhrUsersOnline)
 		xhrUsersOnline.abort();
 
 	});
